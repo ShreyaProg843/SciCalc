@@ -1,0 +1,124 @@
+ body {
+            background-color: #0d0d0d; /* Very dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Share Tech Mono', monospace; /* Techy font for calculator */
+            color: #e0e0e0; /* Light text color */
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif; /* Futuristic font for title */
+            color: #00f0ff; /* Neon blue title */
+            text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff; /* Title glow */
+        }
+
+        .card {
+            background-color: #1a1a1a; /* Dark card background */
+            border: 2px solid #0f6838;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.1), 0 0 40px rgba(255, 0, 234, 0.05); /* Subtle glow around card */
+        }
+
+        /* Calculator Display Input */
+        #calc-display {
+            background-color: #000000; /* Pure black display */
+            color: #87cefa; /* Neon blue text */
+            border: 1px solid #076a77; /* Darker border for depth */
+            border-radius: 10px;
+            font-size: 2.5em; /* Large text for display */
+            height: 90px; /* Taller display */
+            padding: 15px !important; /* Ensure ample padding */
+            text-shadow: 0 0 8px #00f0ff; /* Display text glow */
+            box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.3); /* Inner glow for display */
+        }
+
+        /* Base Button Styling (common to all calculator buttons) */
+        .btn {
+            background-color: #2c2c2c !important; /* Dark grey button background */
+            color: #e0e0e0; /* Default button text color */
+            border: 2px solid transparent !important; /* Start with transparent border */
+            border-radius: 100px;
+            font-size: 2em; /* Larger font for all buttons */
+            height: 70px; /* Fixed height for consistent button size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease-in-out; /* Smooth transitions */
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.05); /* Very subtle initial shadow */
+        }
+
+        .btn:hover {
+            transform: translateY(-2px) scale(1.03); /* Lift and slightly enlarge */
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.97); /* Press effect */
+            box-shadow: 0 0 3px currentColor inset; /* Subtle press glow */
+        }
+
+        /* Specific Neon Styles for Button Types */
+
+        /* Numbers (0-9, .) */
+        .btn-neon-number {
+            border-color: #00f0ff !important; /* Electric Blue border */
+            box-shadow: 0 0 2px #00f0ff,
+                        0 0 2px #00f0ff,
+                        inset 0 0 2px #00f0ff; 
+        .btn-neon-number:hover {
+            box-shadow: 0 0 12px #00f0ff,
+                        0 0 24px #00f0ff,
+                        inset 0 0 12px #00f0ff;
+        }
+    }
+
+        /* Operators (+, -, x, ÷, %) */
+        .btn-neon-operator {
+            border-color: #ffaa00 !important; /* Neon Orange border */
+            color: #FFFF33; /* Match text color to neon */
+            box-shadow: 0 0 8px #ffaa00,
+                        0 0 16px #ffaa00,
+                        inset 0 0 8px #ffaa00;
+        }
+        .btn-neon-operator:hover {
+            box-shadow: 0 0 12px #ffaa00,
+                        0 0 24px #ffaa00,
+                        inset 0 0 12px #ffaa00;
+        }
+
+        /* Special Functions (AC, (, ), etc.) */
+        .btn-neon-function {
+            border-color: #bc13fe!important; /* Vibrant Pink/Magenta border */
+            color:#ff00ea ; /* Match text color to neon */
+            box-shadow: 0 0 8px #ff00ea,
+                        0 0 16px #ff00ea,
+                        inset 0 0 8px #ff00ea;
+        }
+        .btn-neon-function:hover {
+            box-shadow: 0 0 12px #ff00ea,
+                        0 0 24px #ff00ea,
+                        inset 0 0 12px #ff00ea;
+        }
+
+        /* Equals Button (often needs to stand out) */
+        .btn-neon-equals {
+            border-color: #00ff00 !important; /* Bright Green border */
+            color: #1F51FF; /* Match text color to neon */
+            box-shadow: 0 0 12px #00ff00,
+                        0 0 24px #00ff00,
+                        0 0 36px #00ff00,
+                        inset 0 0 0px #00ff00; /* More intense glow */
+        }
+        .btn-neon-equals:hover {
+            box-shadow: 0 0 18px #00ff00,
+                        0 0 36px #00ff00,
+                        0 0 54px #00ff00,
+                        inset 0 0 18px #00ff00;
+        }
+
+        /* Adjust Bootstrap's row and col spacing for calculator layout */
+        .row.g-1 {
+            --bs-gutter-x: 20px; /* Horizontal gap */
+            --bs-gutter-y: 10px; /* Vertical gap */
+        }
